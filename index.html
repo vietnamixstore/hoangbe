@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#F0EEE9">
+<title>Bùi Đức Hoàng — Accountant · Đà Nẵng</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Be+Vietnam+Pro:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F0EEE9;--card:#F9F8F5;--line:#DAD7D0;--tx:#16161a;--mut:#6c6c68;--lime:#16161a;--vio:#5f6f7e;
+--h:"Bricolage Grotesque","Be Vietnam Pro",system-ui,sans-serif;--b:"Be Vietnam Pro","Segoe UI",Roboto,sans-serif}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{margin:0;background:var(--bg);color:var(--tx);font:400 15px/1.7 var(--b);overflow-x:hidden}
+a{color:inherit;text-decoration:none}img{max-width:100%}
+#pg{position:fixed;top:0;left:0;height:3px;width:0;background:var(--lime);z-index:60}
+header{position:sticky;top:12px;z-index:50;margin:12px auto 0;width:min(1100px,92vw);display:flex;align-items:center;justify-content:space-between;padding:10px 12px 10px 20px;border-radius:999px;background:rgba(240,238,233,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid var(--line)}
+.brand{font:800 18px var(--h)}.brand b{color:var(--lime)}
+nav{display:flex;gap:4px;font-size:13px;font-weight:500}
+nav a{padding:8px 13px;border-radius:999px;color:var(--mut)}nav a:hover,nav a.on{background:var(--tx);color:var(--bg)}
+.cta{background:var(--tx);color:var(--bg);font-weight:600;font-size:13px;padding:9px 16px;border-radius:999px}
+.wrap{width:min(1100px,92vw);margin:auto}
+section{padding:90px 0 20px}
+.k{font:600 12px var(--b);letter-spacing:2px;text-transform:uppercase;color:var(--lime)}
+h2{font:800 clamp(36px,6vw,64px)/1.03 var(--h);letter-spacing:-1.5px;margin:10px 0 14px}
+.sub{color:var(--mut);max-width:520px;margin:0 0 36px}
+.hero{display:grid;grid-template-columns:1.15fr .85fr;gap:30px;align-items:center;padding-top:60px}
+.pill{display:inline-flex;gap:8px;align-items:center;font-size:12px;border:1px solid var(--line);border-radius:999px;padding:6px 14px;background:var(--card)}
+.pill i{width:8px;height:8px;border-radius:50%;background:var(--tx)}
+h1{font:800 clamp(52px,9.5vw,116px)/.92 var(--h);letter-spacing:-3px;margin:22px 0}
+h1 span{color:var(--vio)}
+.hero p{color:var(--mut);max-width:470px}
+.btns{display:flex;gap:10px;margin-top:26px;flex-wrap:wrap}
+.btn{padding:13px 22px;border-radius:999px;font-weight:600;font-size:14px;border:1px solid var(--line);cursor:pointer;background:var(--card);color:var(--tx);font-family:var(--b);transition:.2s}
+.btn.p{background:var(--tx);color:var(--bg);border-color:var(--tx)}.btn:hover{transform:translateY(-3px)}
+.ph{aspect-ratio:4/5;border-radius:32px;overflow:hidden;position:relative;border:1px solid var(--line);background:var(--card)}
+.ph img{width:100%;height:100%;object-fit:cover;display:block}
+.ph .mono{position:absolute;inset:0;display:grid;place-items:center;font:800 120px var(--h);color:var(--lime);opacity:.9}
+.tag{position:absolute;left:14px;bottom:14px;background:rgba(240,238,233,.88);backdrop-filter:blur(8px);padding:8px 14px;border-radius:14px;font-size:12px;border:1px solid var(--line)}
+.bento{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:40px}
+.bx{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:22px}
+.bx strong{font:800 clamp(34px,5vw,52px)/1 var(--h);display:block;color:var(--lime)}
+.bx span{font-size:12px;color:var(--mut)}
+.w2{grid-column:span 2}
+.tl{position:relative;border-left:2px solid var(--line);margin-left:8px}
+.ev{position:relative;padding:0 0 28px 28px}
+.ev:before{content:"";position:absolute;left:-8px;top:6px;width:14px;height:14px;border-radius:50%;background:var(--bg);border:3px solid var(--lime)}
+.ev.now:before{background:var(--tx)}
+.yr{font:700 13px var(--b);color:var(--vio);letter-spacing:1px}
+.ev h3{font:700 24px/1.2 var(--h);margin:4px 0 6px}.ev p{margin:0;color:var(--mut);max-width:620px;font-size:14px}
+.skills{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.sk{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:18px 20px}
+.sk div{display:flex;justify-content:space-between;font-weight:600;font-size:14px;margin-bottom:10px}
+.bar{height:6px;background:var(--line);border-radius:9px;overflow:hidden}.bar i{display:block;height:100%;width:0;background:var(--tx);border-radius:9px;transition:width 1.2s cubic-bezier(.2,.8,.2,1)}
+.game{background:var(--card);border:1px solid var(--line);border-radius:32px;padding:34px;text-align:center}
+.acct{font:800 clamp(34px,6vw,60px)/1.1 var(--h);margin:16px 0 22px;min-height:1.2em}
+.side{display:flex;gap:12px;justify-content:center}.side .btn{min-width:130px;font-size:17px;padding:16px 26px}
+.gs{display:flex;gap:30px;justify-content:center;margin-bottom:6px}.gs b{font:800 36px var(--h);display:block;color:var(--lime)}.gs small{font-size:11px;color:var(--mut);text-transform:uppercase;letter-spacing:1px}
+#gm{min-height:24px;margin-top:16px;font-weight:600;font-size:14px}
+.gal{column-count:3;column-gap:12px}.gal figure{margin:0 0 12px;border-radius:20px;overflow:hidden;break-inside:avoid;border:1px solid var(--line);cursor:zoom-in}.gal img{width:100%;display:block;transition:.4s}.gal figure:hover img{transform:scale(1.05)}
+#lb{position:fixed;inset:0;background:rgba(5,5,8,.95);z-index:90;display:none;align-items:center;justify-content:center;padding:20px}#lb.open{display:flex}#lb img{max-height:88vh;object-fit:contain}
+.end{margin-top:90px;border-radius:36px;padding:70px 30px;text-align:center;background:var(--tx);color:var(--bg);border:1px solid var(--tx)}
+.end .k{color:#a9a7a0}.end .btn.p{background:var(--bg);color:var(--tx);border-color:var(--bg)}
+.end h2{margin:8px 0 10px}.end p{color:#cfcdc6;max-width:480px;margin:0 auto 24px}
+footer{padding:36px 0;color:var(--mut);font-size:12px;text-align:center}
+.rv{opacity:0;transform:translateY(24px);transition:opacity .7s,transform .7s}.rv.in{opacity:1;transform:none}
+.vwrap{position:relative;border-radius:28px;overflow:hidden;border:1px solid var(--line);background:#111;aspect-ratio:16/9}
+.vwrap video{width:100%;height:100%;display:block;object-fit:contain;background:#111}
+.vmiss{position:absolute;inset:0;display:none;place-items:center;text-align:center;color:#cfcdc6;font-size:14px;padding:20px}
+.vwrap.err .vmiss{display:grid}
+#music{position:fixed;left:16px;bottom:16px;z-index:40;height:46px;padding:0 16px 0 14px;border-radius:999px;background:var(--tx);color:var(--bg);border:2px solid var(--bg);display:flex;align-items:center;gap:10px;font:600 12px/1 var(--b);letter-spacing:.5px;text-transform:uppercase;cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,.2);touch-action:manipulation}
+#music .eq{display:flex;align-items:flex-end;gap:2px;height:16px}
+#music .eq i{width:3px;height:4px;background:var(--bg);border-radius:1px}
+#music.on{background:var(--vio)}
+#music.on .eq i{animation:eq .9s ease-in-out infinite}
+#music.on .eq i:nth-child(2){animation-delay:.2s}
+#music.on .eq i:nth-child(3){animation-delay:.4s}
+#music.on .eq i:nth-child(4){animation-delay:.1s}
+@keyframes eq{0%,100%{height:4px}50%{height:16px}}
+#music.hint{animation:mpulse 1.6s ease-in-out 3}
+@keyframes mpulse{50%{transform:scale(1.08)}}
+@media(max-width:860px){nav{display:none}.hero{grid-template-columns:1fr}.bento{grid-template-columns:1fr 1fr}.skills{grid-template-columns:1fr}.gal{column-count:2}.ph{max-width:420px}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div id="pg"></div>
+<header>
+  <a class="brand" href="#">hoang<b>.</b>acc</a>
+  <nav id="nav"><a href="#about">Giới thiệu</a><a href="#video">Video</a><a href="#journey">Hành trình</a><a href="#skills">Kỹ năng</a><a href="#game">Nợ–Có</a><a href="#gallery">Ảnh</a></nav>
+  <a class="cta" href="#contact">Liên hệ</a>
+</header>
+
+<main class="wrap">
+<section class="hero" id="top" style="padding-top:60px">
+  <div>
+    <div class="pill"><i></i> Open to connect · Đà Nẵng, VN</div>
+    <h1>Bùi Đức<br><span>Hoàng</span></h1>
+    <p>Kế toán trẻ sinh năm 2004, từ Thái Hòa – Nghệ An đến Đà Nẵng. Thích những con số khớp nhau, báo cáo gọn gàng và những ngày cuối tháng chốt sổ thật êm.</p>
+    <div class="btns"><a class="btn p" href="#journey">Xem hành trình ↓</a><a class="btn" href="#game">Chơi thử Nợ–Có</a></div>
+  </div>
+  <div class="ph"><img src="hoang.jpg" alt="Bùi Đức Hoàng" onerror="this.remove()"><div class="mono">H</div><div class="tag">📍 Đà Nẵng · Accountant</div></div>
+</section>
+
+<div class="bento rv" id="about">
+  <div class="bx"><strong id="age">21</strong><span>Tuổi · Sinh 24.08.2004</span></div>
+  <div class="bx"><strong>2026</strong><span>Tốt nghiệp ĐH Duy Tân</span></div>
+  <div class="bx"><strong id="wd">0</strong><span>Ngày đi làm kể từ 01.07.2026</span></div>
+  <div class="bx"><strong>0 đ</strong><span>Chênh lệch khi chốt sổ (mục tiêu)</span></div>
+  <div class="bx w2"><span>Quê hương</span><div style="font:700 22px/1.3 var(--h);margin-top:6px">Thị xã Thái Hòa, Nghệ An</div><span>Nơi bắt đầu mọi thứ</span></div>
+  <div class="bx w2"><span>Hiện tại</span><div style="font:700 22px/1.3 var(--h);margin-top:6px">Làm việc &amp; sinh sống tại Đà Nẵng</div><span>Thành phố biển, cà phê và bảng cân đối</span></div>
+</div>
+
+<section id="video">
+  <div class="k rv">01 / Video</div>
+  <h2 class="rv">Hoàng<br>qua ống kính</h2>
+  <p class="sub rv">Một đoạn video ngắn về Hoàng. Khi bấm phát, nhạc nền sẽ tạm dừng và tự phát lại khi video kết thúc.</p>
+  <div class="vwrap rv" id="vwrap"><video id="vid" controls playsinline preload="metadata"><source src="hoang.mp4" type="video/mp4"></video><div class="vmiss">Chưa có video — đặt file hoang.mp4 cùng thư mục với index.html</div></div>
+</section>
+
+<section id="journey">
+  <div class="k rv">02 / Hành trình</div>
+  <h2 class="rv">Từ lớp mầm<br>đến bảng cân đối</h2>
+  <p class="sub rv">Các mốc học tập được tính theo năm sinh 2004: vào lớp 1 năm 6 tuổi, mỗi cấp học đúng thời lượng chương trình.</p>
+  <div class="tl">
+    <div class="ev rv"><div class="yr">08.2004</div><h3>Chào đời ở Thái Hòa</h3><p>Hoàng sinh ngày 24/08/2004 tại thị xã Thái Hòa, tỉnh Nghệ An — vùng đất đầy nắng gió và những người hiền chịu khó.</p></div>
+    <div class="ev rv"><div class="yr">2007 – 2010</div><h3>Mẫu giáo</h3><p>Ba năm nhà trẻ và mẫu giáo: học hát, học tô màu, và bài học đầu tiên về chia đều kẹo cho cả lớp.</p></div>
+    <div class="ev rv"><div class="yr">2010 – 2015</div><h3>Tiểu học · Lớp 1 đến lớp 5</h3><p>Năm 6 tuổi vào lớp 1. Phép cộng trừ nhân chia bắt đầu — chưa biết sau này mình sẽ làm nghề “cộng trừ” cả ngày.</p></div>
+    <div class="ev rv"><div class="yr">2015 – 2019</div><h3>THCS · Lớp 6 đến lớp 9</h3><p>Bốn năm cấp hai: nhận ra mình thích môn Toán và thích sự ngăn nắp của sổ vở có kẻ ô.</p></div>
+    <div class="ev rv"><div class="yr">2019 – 2022</div><h3>THPT · Lớp 10 đến lớp 12</h3><p>Ba năm cấp ba, tốt nghiệp tháng 6/2022 và chọn ngành Kế toán — quyết định ngắn gọn nhất, đúng nhất.</p></div>
+    <div class="ev rv"><div class="yr">09.2022</div><h3>Vào Đại học Duy Tân</h3><p>Rời Nghệ An vào Đà Nẵng nhập học. Bắt đầu làm quen với định khoản, chứng từ, thuế và những đêm ôn thi bên ly cà phê.</p></div>
+    <div class="ev rv"><div class="yr">06.2026</div><h3>Tốt nghiệp Cử nhân Kế toán</h3><p>Hoàn thành chương trình tại Đại học Duy Tân (tháng 6/2026). Khép lại bốn năm giảng đường, mở ra trang sổ mới.</p></div>
+    <div class="ev now rv"><div class="yr">07.2026 – NAY</div><h3>Kế toán · Đà Nẵng</h3><p>Chính thức đi làm: đối chiếu số liệu, lập chứng từ, theo dõi công nợ và cùng chốt sổ mỗi cuối kỳ. Mỗi ngày học thêm một điều mới.</p></div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="k rv">03 / Kỹ năng</div>
+  <h2 class="rv">Bộ công cụ<br>của một kế toán</h2>
+  <p class="sub rv">Số liệu tự đánh giá cho vui — nhưng sự cẩn thận thì là thật.</p>
+  <div class="skills" id="sk"></div>
+</section>
+
+<section id="game">
+  <div class="k rv">04 / Mini game</div>
+  <h2 class="rv">Thử thách<br>Nợ hay Có?</h2>
+  <p class="sub rv">Mỗi tài khoản có số dư bên Nợ hoặc bên Có. Đoán đúng liên tiếp trong 30 giây — kỷ lục lưu trên thiết bị của bạn.</p>
+  <div class="game rv">
+    <div class="gs"><div><b id="gt">30</b><small>Giây</small></div><div><b id="gsc">0</b><small>Điểm</small></div><div><b id="gb">0</b><small>Kỷ lục</small></div></div>
+    <div class="acct" id="acct">Sẵn sàng?</div>
+    <div class="side" id="side"><button class="btn p" id="gstart" type="button">Bắt đầu</button></div>
+    <div id="gm"></div>
+  </div>
+</section>
+
+<section id="gallery">
+  <div class="k rv">05 / Khoảnh khắc</div>
+  <h2 class="rv">Album<br>của Hoàng</h2>
+  <p class="sub rv">Đặt ảnh hoang1.jpg, hoang2.jpg, hoang3.jpg... cùng thư mục, web sẽ tự nhận. Chạm vào ảnh để xem lớn.</p>
+  <div class="gal" id="gg"></div>
+</section>
+
+<section class="end" id="contact" style="padding:70px 30px">
+  <div class="k">Let's connect</div>
+  <h2>Số liệu khớp,<br>tình bạn cũng vậy.</h2>
+  <p>Cần trao đổi về kế toán, hay đơn giản là rủ đi cà phê ở Đà Nẵng? Cứ nhắn cho Hoàng nhé.</p>
+  <a class="btn p" href="#top">Về đầu trang ↑</a>
+</section>
+</main>
+<footer>© 2026 Bùi Đức Hoàng · Personal website · Made with ♥ in Đà Nẵng</footer>
+<audio id="bgm" autoplay preload="metadata"></audio>
+<button id="music" type="button" aria-label="Bật/tắt nhạc nền" aria-pressed="false"><span class="eq"><i></i><i></i><i></i><i></i></span><span id="mtxt">Bật nhạc</span></button>
+<div id="lb"><img alt=""></div>
+
+<script>
+(function(){
+var $=function(s){return document.querySelector(s)},$$=function(s){return [].slice.call(document.querySelectorAll(s))};
+/* tuổi + ngày đi làm */
+var n=new Date(),a=n.getFullYear()-2004;if(n<new Date(n.getFullYear(),7,24))a--;$('#age').textContent=a;
+$('#wd').textContent=Math.max(0,Math.floor((Date.now()-new Date(2026,6,1))/864e5));
+/* progress + active nav */
+var secs=$$('main section[id]'),ln=$$('#nav a');
+function sc(){var h=document.documentElement,m=h.scrollHeight-h.clientHeight;$('#pg').style.width=(m>0?h.scrollTop/m*100:0)+'%';var c='';secs.forEach(function(s){if(s.getBoundingClientRect().top<160)c=s.id});ln.forEach(function(x){x.classList.toggle('on',x.getAttribute('href')==='#'+c)})}
+addEventListener('scroll',sc,{passive:true});sc();
+/* reveal */
+var io='IntersectionObserver' in window?new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12}):null;
+$$('.rv').forEach(function(e){io?io.observe(e):e.classList.add('in')});
+/* skills */
+var S=[["Kế toán tổng hợp & định khoản",90],["Excel / Google Sheets",88],["Phần mềm kế toán (MISA, Fast…)",80],["Thuế GTGT, TNDN, TNCN",78],["Báo cáo tài chính",76],["Tiếng Anh chuyên ngành",65]],sk=$('#sk');
+S.forEach(function(s){var d=document.createElement('div');d.className='sk rv';d.innerHTML='<div><span>'+s[0]+'</span><span>'+s[1]+'%</span></div><div class="bar"><i data-w="'+s[1]+'"></i></div>';sk.appendChild(d)});
+var bo=io&&new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){var i=e.target.querySelector('i');i.style.width=i.dataset.w+'%';bo.unobserve(e.target)}})},{threshold:.4});
+$$('#sk .sk').forEach(function(e){io&&io.observe(e);bo?bo.observe(e):e.querySelector('i').style.width=e.querySelector('i').dataset.w+'%'});
+/* game Nợ - Có */
+var A=[["Tiền mặt","N"],["Doanh thu","C"],["Chi phí lương","N"],["Phải trả người bán","C"],["Hàng tồn kho","N"],["Vốn chủ sở hữu","C"],["Phải thu khách hàng","N"],["Hao mòn TSCĐ","C"],["Tiền gửi ngân hàng","N"],["Vay ngân hàng","C"],["Giá vốn hàng bán","N"],["Thuế phải nộp","C"],["Tài sản cố định","N"],["Lợi nhuận chưa phân phối","C"]];
+var run=false,t=30,pt=0,cur=null,tm=null,best=0;
+try{best=+localStorage.getItem('hd_best')||0}catch(e){}$('#gb').textContent=best;
+function nx(){var p;do{p=A[Math.floor(Math.random()*A.length)]}while(cur&&p===cur);cur=p;$('#acct').textContent=p[0]}
+function btns(){$('#side').innerHTML='<button class="btn" data-s="N" type="button">NỢ</button><button class="btn p" data-s="C" type="button">CÓ</button>';$$('#side .btn').forEach(function(b){b.onclick=function(){ans(b.dataset.s)}})}
+function start(){run=true;t=30;pt=0;$('#gsc').textContent=0;$('#gm').textContent='';btns();nx();var st=Date.now();clearInterval(tm);tm=setInterval(function(){t=Math.max(0,30-(Date.now()-st)/1000);$('#gt').textContent=t.toFixed(0);if(t<=0)end()},200)}
+function ans(s){if(!run)return;if(s===cur[1]){pt++;$('#gsc').textContent=pt;$('#gm').textContent='✅ Chuẩn!'}else{pt=Math.max(0,pt-1);$('#gsc').textContent=pt;$('#gm').textContent='❌ '+cur[0]+' có số dư bên '+(cur[1]==='N'?'Nợ':'Có')}nx()}
+function end(){run=false;clearInterval(tm);var m=pt>=20?'🏆 Kế toán trưởng tương lai!':pt>=12?'👍 Sổ sách sạch đẹp.':'📒 Ôn lại bảng hệ thống tài khoản nhé!';if(pt>best){best=pt;$('#gb').textContent=best;m+=' Kỷ lục mới!';try{localStorage.setItem('hd_best',best)}catch(e){}}
+$('#acct').textContent='Hết giờ · '+pt+' điểm';$('#gm').textContent=m;$('#side').innerHTML='<button class="btn p" id="gstart" type="button">Chơi lại</button>';$('#gstart').onclick=start}
+$('#gstart').onclick=start;
+/* gallery tự nhận hoang1.jpg ... */
+var gg=$('#gg'),imgs=[],lb=$('#lb'),li=lb.querySelector('img');
+function add(src,k){var f=document.createElement('figure'),im=new Image();im.src=src;im.alt='Bùi Đức Hoàng — ảnh '+k;im.loading='lazy';f.appendChild(im);gg.appendChild(f);imgs.push(src);var i=imgs.length-1;f.onclick=function(){li.src=imgs[i];lb.classList.add('open')}}
+function probe(k){var s='hoang'+k+'.jpg',p=new Image();p.onload=function(){add(s,k);if(k<60)probe(k+1)};p.onerror=function(){if(k===1)gg.innerHTML='<p class="sub">Chưa có ảnh — thêm hoang1.jpg để bắt đầu.</p>'};p.src=s}
+probe(1);lb.onclick=function(){lb.classList.remove('open')};
+addEventListener('keydown',function(e){if(e.key==='Escape')lb.classList.remove('open')});
+})();
+</script>
+<script>
+/* Video: báo thiếu file */
+(function(){var v=document.getElementById('vid'),w=document.getElementById('vwrap');v.querySelector('source').addEventListener('error',function(){w.classList.add('err');v.removeAttribute('controls')})})();
+/* Nhạc nền: đặt 10 file hoangmusic1.mp3 ... hoangmusic10.mp3 cùng thư mục. Tự phát khi mở web; nếu bị chặn thì phát ở lần chạm/cuộn/bấm phím đầu tiên */
+(function(){
+  var a=document.getElementById('bgm'),b=document.getElementById('music'),t=document.getElementById('mtxt'),v=document.getElementById('vid');
+  var userOff=false,wasPlaying=false,trying=false,dead=false,vPaused=false;
+  var EV=['pointerdown','pointerup','touchstart','touchend','click','keydown','wheel','touchmove','scroll'];
+  a.volume=0.5;
+  var TOTAL=10,order=[],pos=0,last=-1,fails=0;
+  function shuffle(){var i,j,x;order=[];for(i=1;i<=TOTAL;i++)order.push(i);for(i=TOTAL-1;i>0;i--){j=Math.floor(Math.random()*(i+1));x=order[i];order[i]=order[j];order[j]=x}
+    if(order[0]===last&&TOTAL>1){j=1+Math.floor(Math.random()*(TOTAL-1));x=order[0];order[0]=order[j];order[j]=x}pos=0}
+  function load(){last=order[pos];a.src='hoangmusic'+last+'.mp3'}
+  function next(){pos++;if(pos>=order.length)shuffle();load()}
+  shuffle();load();
+  a.addEventListener('ended',function(){next();if(!userOff&&!vPlaying())a.play().catch(function(){})});
+  a.addEventListener('playing',function(){fails=0;ui(true);detach()});
+  function vPlaying(){return v&&!v.paused&&!v.ended}
+  function ui(on){b.classList.toggle('on',on);b.setAttribute('aria-pressed',on);t.textContent=on?'Tắt nhạc':'Bật nhạc'}
+  function detach(){EV.forEach(function(e){window.removeEventListener(e,onGesture,true)})}
+  function attach(){EV.forEach(function(e){window.addEventListener(e,onGesture,{capture:true,passive:true})})}
+  function tryPlay(){
+    if(trying||dead||userOff||!a.paused||vPlaying())return;
+    trying=true;var p=a.play();
+    if(p&&p.then){p.then(function(){trying=false;ui(true);detach()}).catch(function(){trying=false})}else{trying=false}
+  }
+  function onGesture(e){if(b.contains(e.target))return;tryPlay()}
+  b.onclick=function(){if(a.paused){userOff=false;dead=false;trying=false;if(vPlaying())v.pause();tryPlay()}else{userOff=true;a.pause();ui(false);detach()}};
+  a.addEventListener('error',function(){fails++;trying=false;
+    if(fails>=TOTAL){dead=true;detach();ui(false);t.textContent='Chưa có file nhạc';return}
+    next();if(!userOff&&!vPlaying())a.play().catch(function(){})});
+  document.addEventListener('visibilitychange',function(){
+    if(document.hidden){wasPlaying=!a.paused;if(wasPlaying)a.pause()}
+    else if(wasPlaying){wasPlaying=false;if(!vPlaying())a.play().catch(function(){})}});
+  /* video phát thì tạm dừng nhạc, xong thì phát lại */
+  if(v){
+    v.addEventListener('play',function(){if(!a.paused){vPaused=true;a.pause();ui(false)}});
+    function back(){if(vPaused&&!userOff){vPaused=false;a.play().catch(function(){})}else vPaused=false}
+    v.addEventListener('pause',back);v.addEventListener('ended',back);
+  }
+  attach();tryPlay();
+  a.addEventListener('canplay',tryPlay,{once:true});
+  setTimeout(function(){if(a.paused&&!dead&&!vPaused)b.classList.add('hint')},3200);
+})();
+</script>
+</body>
+</html>
